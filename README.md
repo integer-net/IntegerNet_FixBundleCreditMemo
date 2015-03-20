@@ -23,19 +23,6 @@ Requirements
 - PHP >= 5.2.0
 - PHP <= 5.5.x
 
-Compatibility
--------------
-- Magento 1.6.0.0 ?
-- Magento 1.6.1.0 ?
-- Magento 1.6.2.0 ?
-- Magento 1.7.0.0 ?
-- Magento 1.7.0.1 ?
-- Magento 1.7.0.2 ?
-- Magento 1.8.0.0
-- Magento 1.8.1.0
-- Magento 1.9.0.0
-- Magento 1.9.0.1
-
 Installation Instructions
 -------------------------
 1. Install the extension by copying the `app` directory into your Magento document root.
