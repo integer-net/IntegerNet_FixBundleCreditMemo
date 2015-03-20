@@ -1,0 +1,31 @@
+{
+    "name": "integer-net/IntegerNet_FixBundleCreditMemo",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "homepage": "https://github.com/integer-net/IntegerNet_FixBundleCreditMemo",
+    "description": "Fixes a magento bug: Wrong quantity calculation if you want to refund a bundle product using a credit memo",
+    "keywords": ["magento"],
+    "authors": [
+        {
+            "name": "integer_net GmbH",
+            "email": "info@integer-net.de",
+            "homepage": "http://www.integer-net.de/",
+            "role": "Company"
+        },
+        {
+            "name": "Soeren Zorn",
+            "email": "sz@integer-net.de",
+            "homepage": "http://www.integer-net.de/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["src/app/code/community/IntegerNet/FixBundleCreditMemo", "app/code/community/IntegerNet/FixBundleCreditMemo"],
+            ["src/app/etc/modules/IntegerNet_FixBundleCreditMemo.xml", "app/etc/modules/IntegerNet_FixBundleCreditMemo.xml"]
+        ]
+    }
+}

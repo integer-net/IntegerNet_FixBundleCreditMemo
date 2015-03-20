@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * integer_net Magento Module
+ *
+ * @category IntegerNet
+ * @package IntegerNet_FixBundleCreditMemo
+ * @copyright  Copyright (c) 2012-2015 integer_net GmbH (http://www.integer-net.de/)
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software Licence 3.0 (OSL-3.0)
+ * @author Soeren Zorn <sz@integer-net.de>
+ */
+-->
+<config>
+    <modules>
+        <IntegerNet_FixBundleCreditMemo>
+            <version>1.0.0</version>
+        </IntegerNet_FixBundleCreditMemo>
+    </modules>
+    <global>
+        <models>
+            <integernet_fixbundlecreditmemo>
+                <class>IntegerNet_FixBundleCreditMemo_Model</class>
+            </integernet_fixbundlecreditmemo>
+            <sales>
+                <rewrite>
+                    <service_order>IntegerNet_FixBundleCreditMemo_Model_Service_Order</service_order>
+                </rewrite>
+            </sales>
+        </models>
+    </global>
+</config>
