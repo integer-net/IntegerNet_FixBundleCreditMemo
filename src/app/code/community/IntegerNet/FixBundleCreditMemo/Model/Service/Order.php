@@ -30,11 +30,6 @@ class IntegerNet_FixBundleCreditMemo_Model_Service_Order extends Mage_Sales_Mode
             if ($orderItem->isDummy()) {
                 $parentItem = $orderItem->getParentItem();
                 if (is_object($parentItem) && $parentItem->getProductType() == Mage_Catalog_Model_Product_Type::TYPE_BUNDLE) {
-                    if (isset($qtys[$parentItem->getId()])) {
-                        $qtyParent = (float)$qtys[$parentItem->getId()];
-                    } else {
-                        $qtyParent = $parentItem->getQtyToRefund();
-                    }
                     $qty = (float)$orderItem->getQtyOrdered() / (float)$parentItem->getQtyOrdered();
                 }
                 if(!isset($qty)) {
@@ -115,11 +110,6 @@ class IntegerNet_FixBundleCreditMemo_Model_Service_Order extends Mage_Sales_Mode
             if ($orderItem->isDummy()) {
                 $parentItem = $orderItem->getParentItem();
                 if (is_object($parentItem) && $parentItem->getProductType() == Mage_Catalog_Model_Product_Type::TYPE_BUNDLE) {
-                    if (isset($qtys[$parentItem->getId()])) {
-                        $qtyParent = (float)$qtys[$parentItem->getId()];
-                    } else {
-                        $qtyParent = $parentItem->getQtyToRefund();
-                    }
                     $qty = (float)$orderItem->getQtyOrdered() / (float)$parentItem->getQtyOrdered();
                 }
                 if(!isset($qty)) {
