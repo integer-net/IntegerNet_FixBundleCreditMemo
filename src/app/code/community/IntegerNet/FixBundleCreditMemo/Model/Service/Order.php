@@ -32,6 +32,9 @@ class IntegerNet_FixBundleCreditMemo_Model_Service_Order extends Mage_Sales_Mode
                 if (is_object($parentItem) && $parentItem->getProductType() == Mage_Catalog_Model_Product_Type::TYPE_BUNDLE) {
                     $qty = (float)$orderItem->getQtyOrdered() / (float)$parentItem->getQtyOrdered();
                 }
+
+                $qty = ($qty * (float) $qtys[$orderItem->getParentItemId()]);
+
                 if(!isset($qty)) {
                     $qty = 1;
                 }
@@ -112,9 +115,13 @@ class IntegerNet_FixBundleCreditMemo_Model_Service_Order extends Mage_Sales_Mode
                 if (is_object($parentItem) && $parentItem->getProductType() == Mage_Catalog_Model_Product_Type::TYPE_BUNDLE) {
                     $qty = (float)$orderItem->getQtyOrdered() / (float)$parentItem->getQtyOrdered();
                 }
+
+                $qty = ($qty * (float) $qtys[$orderItem->getParentItemId()]);
+
                 if(!isset($qty)) {
                     $qty = 1;
                 }
+
             } else {
                 if (isset($qtys[$orderItem->getId()])) {
                     $qty = (float) $qtys[$orderItem->getId()];
